@@ -1,0 +1,82 @@
+# Cube with texture mapping and normals
+# 8 vertices, 24 UVs, 6 normals, 12 triangles
+
+# Vertices
+v -0.5  0.5  0.5
+v -0.5 -0.5  0.5
+v  0.5 -0.5  0.5
+v  0.5  0.5  0.5
+v  0.5  0.5 -0.5
+v  0.5 -0.5 -0.5
+v -0.5 -0.5 -0.5
+v -0.5  0.5 -0.5
+
+# Texture coordinates (UVs)
+# Front
+vt 0.0 1.0
+vt 0.0 0.0
+vt 1.0 0.0
+vt 1.0 1.0
+# Back
+vt 0.0 1.0
+vt 0.0 0.0
+vt 1.0 0.0
+vt 1.0 1.0
+# Left
+vt 0.0 1.0
+vt 0.0 0.0
+vt 1.0 0.0
+vt 1.0 1.0
+# Right
+vt 0.0 1.0
+vt 0.0 0.0
+vt 1.0 0.0
+vt 1.0 1.0
+# Bottom
+vt 0.0 1.0
+vt 0.0 0.0
+vt 1.0 0.0
+vt 1.0 1.0
+# Top
+vt 0.0 1.0
+vt 0.0 0.0
+vt 1.0 0.0
+vt 1.0 1.0
+
+# Normals
+vn  0.0  0.0  1.0
+vn  0.0  0.0 -1.0
+vn -1.0  0.0  0.0
+vn  1.0  0.0  0.0
+vn  0.0 -1.0  0.0
+vn  0.0  1.0  0.0
+
+# Material
+mtllib cube.mtl
+usemtl CubeMaterial
+
+# Faces (format: vertex/uv/normal)
+
+# Front face (+Z)
+f 1/1/1  2/2/1  3/3/1
+f 1/1/1  3/3/1  4/4/1
+
+# Back face (-Z)
+f 5/5/2  6/6/2  7/7/2
+f 5/5/2  7/7/2  8/8/2
+
+# Left face (-X)
+f 8/9/3  7/10/3  2/11/3
+f 8/9/3  2/11/3  1/12/3
+
+# Right face (+X)
+f 4/13/4  3/14/4  6/15/4
+f 4/13/4  6/15/4  5/16/4
+
+# Bottom face (-Y)
+f 2/17/5  7/18/5  6/19/5
+f 2/17/5  6/19/5  3/20/5
+
+# Top face (+Y)
+f 8/21/6  1/22/6  4/23/6
+f 8/21/6  4/23/6  5/24/6

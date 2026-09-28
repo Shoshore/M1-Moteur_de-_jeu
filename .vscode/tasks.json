@@ -1,0 +1,42 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "C++ build only",
+            "type": "shell",
+            "command": "mkdir -p build && cd build && rm -f moteur && cmake .. && ln -sf compile_commands.json ../compile_commands.json && make -j",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": true,
+                "clear": false
+            }
+        },
+        {
+            "label": "C++ build and run",
+            "type": "shell",
+            "command": "mkdir -p build && cd build && rm -f moteur && cmake .. && ln -sf compile_commands.json ../compile_commands.json && make -j && ./launch-moteur.sh",
+            "group": "build",
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": true,
+                "clear": false
+            }
+        }
+    ]
+}
